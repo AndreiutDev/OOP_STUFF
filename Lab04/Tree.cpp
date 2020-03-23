@@ -2,11 +2,6 @@
 #include <iostream>
 #include <stdio.h>
 
-node::node()
-{
-
-}
-
 Tree::Tree()
 {
 	root = nullptr;
@@ -52,7 +47,7 @@ node* Tree::createNewTreeNode(int value)
 ========================================================================
 */
 
-node* minValueNode(node* node)
+node* Tree::minValueNode(node* node)
 {
     struct node* current = node;
     while (current && current->left != NULL)
@@ -158,11 +153,11 @@ int Tree::FindHeight(node *n)
 
 int main()
 {
-    printf("              5          \n");
+    printf("              5           \n");
     printf("           /     \        \n");
-    printf("          3      7      \n");
-    printf("        /  \    /  \    \n");
-    printf("       2   4    6    8  \n");
+    printf("          3      7        \n");
+    printf("        /  \    /  \      \n");
+    printf("       2   4    6    8    \n");
 
     Tree tree_root;
 	tree_root.root = tree_root.insert(50, tree_root.root);

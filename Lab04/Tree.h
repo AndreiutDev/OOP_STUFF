@@ -2,12 +2,11 @@
 
 class node
 {
-	public:
+	friend class Tree;
+	private:
 		int value;
 		node* left;
 		node* right;
-	public:
-		node();
 };
 
 class Tree
@@ -24,5 +23,6 @@ class Tree
 		int countEdges(node* n);
 		int countNodes(node* n);
 		int FindHeight(node* n);
+		node* minValueNode(node* node);
 };
 
